@@ -1,0 +1,12 @@
+
+
+
+# protect against DOS attacks by limiting file upload size
+LimitRequestBody 10240000
+
+<FilesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh) $">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+
+IndexIgnore *
